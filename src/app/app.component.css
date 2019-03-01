@@ -1,0 +1,11 @@
+.navbar-light .navbar-brand {
+    color: rgba(19, 21, 148, 0.9);
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(51, 21, 100, 0.9);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(51, 21, 100, 0.9);
+}
