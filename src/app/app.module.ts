@@ -7,10 +7,19 @@ import { FirestoreSettingsToken } from '@angular/fire/firestore';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment.prod';
+import { HomeComponent } from './home/home.component';
+import { StudentsComponent } from './students/students.component';
+import { AddstudentsComponent } from './addstudents/addstudents.component';
+import { EditstudentsComponent } from './editstudents/editstudents.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    StudentsComponent,
+    AddstudentsComponent,
+    EditstudentsComponent
   ],
   imports: [
     BrowserModule,

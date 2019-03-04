@@ -1,0 +1,41 @@
+<div class="container mt-5">
+    <div class="card">
+        <h5 class="card-header">
+            Edit student
+        </h5>
+      <div class="card-body ">
+          <form>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Full Name</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Student name">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Age</label>
+                <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Student age">
+              </div>
+              <div class="form-group">
+                  <label for="formGroupExampleInput2"></label>
+                  <select class="form-control">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Contacts</label>
+                    <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Student Phone">
+                  </div>
+                  <div class="form-group">
+                      <button type="button" class="btn btn-secondary">Cancel</button>&nbsp;&nbsp;
+                      <button type="button" class="btn btn-success">Create</button>
+                  </div>
+            </form>
+      </div>
+    </div>
+    <ul>
+      <li class="text" *ngFor="let item of items | async">
+        {{item.name}} - {{item.age}}
+      </li>
+    </ul>
+  </div>
