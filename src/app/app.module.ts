@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { StudentsComponent } from './students/students.component';
 import { AddstudentsComponent } from './addstudents/addstudents.component';
 import { EditstudentsComponent } from './editstudents/editstudents.component';
+import { DeletestudentsComponent } from './deletestudents/deletestudents.component';
+import { ShowstudentsComponent } from './showstudents/showstudents.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { EditstudentsComponent } from './editstudents/editstudents.component';
     HomeComponent,
     StudentsComponent,
     AddstudentsComponent,
-    EditstudentsComponent
+    EditstudentsComponent,
+    DeletestudentsComponent,
+    ShowstudentsComponent
   ],
   imports: [
     BrowserModule,
