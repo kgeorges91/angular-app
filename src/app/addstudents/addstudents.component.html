@@ -6,16 +6,16 @@
     <div class="card-body ">
         <form>
             <div class="form-group">
-              <label for="formGroupExampleInput">Full Name</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Student name">
+              <label for="formGroupExampleInput">fullName</label>
+              <input type="text" class="form-control" id="fn" name="fullName" [(ngModel)]="data.fullName" #data="ngModel"  placeholder="Student name">
             </div>
             <div class="form-group">
-              <label for="formGroupExampleInput2">Age</label>
-              <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Student age">
+              <label for="formGroupExampleInput2">age</label>
+              <input type="number" class="form-control" id="fa" name="age" #data="ngModel" [(ngModel)]="data.age" placeholder="Student age">
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2"></label>
-                <select class="form-control">
+                <select class="form-control" id="fl" name="level" #data="ngModel" [(ngModel)]="data.level">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -23,12 +23,12 @@
                   </select>
               </div>
               <div class="form-group">
-                  <label for="formGroupExampleInput2">Contacts</label>
-                  <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Student Phone">
+                  <label for="formGroupExampleInput2">contacts</label>
+                  <input type="number" class="form-control" id="fc" name="contact" #data="ngModel" [(ngModel)]="data.contact" placeholder="Student Phone">
                 </div>
                 <div class="form-group">
                     <button type="button" class="btn btn-secondary">Cancel</button>&nbsp;&nbsp;
-                    <button type="button" class="btn btn-success">Create</button>
+                    <button type="button" class="btn btn-success" (click)= "addStudent(data)">Create</button>
                 </div>
           </form>
     </div>

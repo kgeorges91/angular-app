@@ -14,77 +14,23 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Kwedi</td>
-        <td>25</td>
-        <td>5</td>
-        <td>691253632</td>
+      <tr *ngFor="let student of students">
+        <th scope="row">#</th>
+        <td>{{student.name}}</td>
+        <td>{{student.age}}</td>
+        <td>{{student.level}}</td>
+        <td>{{student.contact}}</td>
         <td>
-          <a href="" [routerLink]= "[01, 'show']" class="text-success">
-              <i class="fa fa-eye" aria-hidden="true">view</i>
-          </a>  /
-          <a href="" [routerLink]= "[01, 'edit']">
-            <i class="fa fa-pencil-square-o" aria-hidden="true">edit</i>
-          </a>  /  
-          <a href="" class="text-danger"> 
-            <i class="fa fa-trash" aria-hidden="true">delete</i>
-          </a>
-      </td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Azrael</td>
-        <td>18</td>
-        <td>5</td>
-        <td>691254532</td>
-        <td>
-          <a href="" [routerLink]= "[02, 'show']" class="text-success">
-            <i class="fa fa-eye" aria-hidden="true">view</i>
-          </a>  /
-          <a href="" [routerLink]= "[02, 'edit']">
-            <i class="fa fa-pencil-square-o" aria-hidden="true">edit</i>
-          </a>  /  
-          <a href="" class="text-danger">
-            <i class="fa fa-trash" aria-hidden="true">delete</i>
-          </a>
-      </td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>John</td>
-        <td>36</td>
-        <td>5</td>
-        <td>691253612</td>
-        <td>
-          <a href="" [routerLink]= "[03, 'show']" class="text-success">
-            <i class="fa fa-eye" aria-hidden="true">view</i>
-          </a>  /
-          <a href="" [routerLink]= "[03, 'edit']">
-            <i class="fa fa-pencil-square-o" aria-hidden="true">edit</i>
-          </a>  /  
-          <a href="" class="text-danger">
-            <i class="fa fa-trash" aria-hidden="true">delete</i>
-          </a>
-      </td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Jarryl</td>
-        <td>20</td>
-        <td>5</td>
-        <td>69198336</td>
-        <td>
-          <a href="" [routerLink]= "[04, 'show']" class="text-success">
-            <i class="fa fa-eye" aria-hidden="true">view</i>
-          </a>  /
-          <a href="" [routerLink]= "[04, 'edit']">
-            <i class="fa fa-pencil-square-o" aria-hidden="true">edit</i>
-          </a>  /  
-          <a href="" class="text-danger">
-            <i class="fa fa-trash" aria-hidden="true">delete</i>
-          </a>
-      </td>
+            <a href="" [routerLink]= "[01, 'show']" class="text-success">
+                <i class="fa fa-eye" aria-hidden="true">view</i>
+            </a>  /
+            <a href="" [routerLink]= "[01, 'edit']">
+              <i class="fa fa-pencil-square-o" aria-hidden="true">edit</i>
+            </a>  /  
+            <a href="" class="text-danger"> 
+              <i class="fa fa-trash" aria-hidden="true">delete</i>
+            </a>
+        </td>
       </tr>
     </tbody>
   </table>
