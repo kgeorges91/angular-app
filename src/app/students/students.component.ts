@@ -9,6 +9,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class StudentsComponent implements OnInit {
 
   students: any[] = [];
+  singleStudent: any = {};
   constructor(private db: AngularFirestore) { }
 
   ngOnInit() {
@@ -18,8 +19,23 @@ export class StudentsComponent implements OnInit {
   getAllStudents(){ 
     this.db.collection('students').ref.get()
     .then((data) => {
-        data.forEach((student) => this.students.push(student.data() ))
+        data.forEach((student) => {
+          this.singleStudent = {
+            id: student.id,
+            data: student.data()
+          };
+          this.students.push(this.singleStudent)
+        })
     })
+    .catch((error) => console.log('Error:', error));
+  }
+
+  deleteStudent(id){ 
+    this.db.collection('students').doc(id).delete()
+    .then(() => {
+      alert('Are you sure?')
+      location.reload();
+      console.log('Deleted')})
     .catch((error) => console.log('Error:', error));
   }
   

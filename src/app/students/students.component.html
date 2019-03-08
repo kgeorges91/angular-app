@@ -15,20 +15,20 @@
     </thead>
     <tbody>
       <tr *ngFor="let student of students">
-        <th scope="row">#</th>
-        <td>{{student.name}}</td>
-        <td>{{student.age}}</td>
-        <td>{{student.level}}</td>
-        <td>{{student.contact}}</td>
+        <th scope="row">{{student.id}}</th>
+        <td>{{student.data.name}}</td>
+        <td>{{student.data.age}}</td>
+        <td>{{student.data.level}}</td>
+        <td>{{student.data.contact}}</td>
         <td>
-            <a href="" [routerLink]= "[01, 'show']" class="text-success">
+            <a href="" [routerLink]= "[student.id]" class="text-success">
                 <i class="fa fa-eye" aria-hidden="true">view</i>
             </a>  /
-            <a href="" [routerLink]= "[01, 'edit']">
+            <a href="" [routerLink]= "[student.id, 'edit']">
               <i class="fa fa-pencil-square-o" aria-hidden="true">edit</i>
             </a>  /  
-            <a href="" class="text-danger"> 
-              <i class="fa fa-trash" aria-hidden="true">delete</i>
+            <a href="javascript:0" class="text-danger"> 
+              <i class="fa fa-trash" aria-hidden="true" (click)= "deleteStudent(student.id)">delete</i>
             </a>
         </td>
       </tr>
