@@ -5,6 +5,9 @@ import { StudentsComponent } from './students/students.component';
 import { AddstudentsComponent } from './addstudents/addstudents.component';
 import { EditstudentsComponent } from './editstudents/editstudents.component';
 import { ShowstudentsComponent } from './showstudents/showstudents.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { EmailComponent } from './email/email.component';
 
 const routes: Routes = [
     {
@@ -30,7 +33,10 @@ const routes: Routes = [
   {
     path: 'students/:id/show',
     component: ShowstudentsComponent
-  }
+  },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignUpComponent },
+  { path: 'login-email', component: EmailComponent },
 ];
 
 @NgModule({
