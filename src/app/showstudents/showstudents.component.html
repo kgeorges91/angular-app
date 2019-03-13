@@ -1,31 +1,24 @@
 <div class="container mt-5">
-    <table class="table">
-        <thead class="thead-dark">
-          <tr>
-              <th scope="col">Numbers</th>
-              <th scope="col">Names</th>
-              <th scope="col">Ages</th>
-              <th scope="col">Level</th>
-              <th scope="col">Contacts</th>
-              <th scope="col">ID</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Kwedi</td>
-            <td>25</td>
-            <td>5</td>
-            <td>691253632</td>
-            <td>123456789</td>
-          </tr>
-    </table>
-</div>
+    <!-- <div>
+      <h1> <input type="text" class="text" id="formName" name="name" [(ngModel)]="student.name" #data="ngModel" placeholder="Student name" readonly></h1><hr>
+    </div>
+    <div>
+      <h4>Age <input type="number" class="form-control" id="formAge" name="age" [(ngModel)]="student.age" #data="ngModel" placeholder="Student age" readonly></h4>
+    </div>
+    <br>
+    <div>
+      <h4>Level <input type="text" class="form-control" id="formLevel" name="level" [(ngModel)]="student.level" #data="ngModel" readonly></h4>
+    </div>
+    <br>
+    <div>
+      <h4>Contact <input type="number" class="form-control" id="formContact" name="contact" [(ngModel)]="student.contact" #data="ngModel" placeholder="Student Phone" readonly></h4>
+    </div> -->
 
-<div class="container">
-  <h1>Name: KWEDI Georges</h1>
-  <hr>
-   <h4>Age : 25</h4>
-   <h5>Level : 5</h5>
-   <h6>Phone : 691253632</h6>
+    <div>
+      <h1>{{student.name}}</h1>
+      <hr>
+      <h2>Age: {{student.age}} </h2><br>
+     <h2>Age: {{student.level}} </h2><br>
+     <h2>Age: {{student.contact}} </h2><br>
+    </div>
 </div>

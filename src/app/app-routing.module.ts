@@ -8,6 +8,8 @@ import { ShowstudentsComponent } from './showstudents/showstudents.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { EmailComponent } from './email/email.component';
+import { AuthGuard } from './core/core/auth.guard';
+
 
 const routes: Routes = [
     {
@@ -16,23 +18,28 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'students',
-    component: StudentsComponent
+    component: StudentsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'new',
-    component: AddstudentsComponent
+    component: AddstudentsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'students/:id/edit',
-    component: EditstudentsComponent
+    component: EditstudentsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'students/:id/show',
-    component: ShowstudentsComponent
+    component: ShowstudentsComponent,
+    canActivate: [AuthGuard]
   },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignUpComponent },

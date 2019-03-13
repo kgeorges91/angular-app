@@ -21,7 +21,7 @@
         <td>{{student.data.level}}</td>
         <td>{{student.data.contact}}</td>
         <td>
-            <a href="" [routerLink]= "[student.id]" class="text-success">
+            <a href="" [routerLink]= "[student.id, 'show']" class="text-success">
                 <i class="fa fa-eye" aria-hidden="true">view</i>
             </a>  /
             <a href="" [routerLink]= "[student.id, 'edit']">

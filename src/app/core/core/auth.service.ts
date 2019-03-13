@@ -118,7 +118,7 @@ emailSignUp(email: string, password: string) {
   private handleError(error: Error) {
     console.error(error);
     //this.notify.error(error.message);
-    console.error(error.message);
+    alert(error.message);
   }
 
 }
